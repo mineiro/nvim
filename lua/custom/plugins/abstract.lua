@@ -7,7 +7,7 @@ return {
       give_border = {
         enable = true,
         opts = {
-          pattern = { 'lspinfo', 'mason' },
+          pattern = { 'lspinfo', 'mason', 'lazy' },
         },
       },
     }

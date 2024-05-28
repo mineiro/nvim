@@ -16,7 +16,7 @@ return {
     'nvim-neotest/nvim-nio',
 
     -- Required dependency for nvim-dap-ui
-    'nvim-neotest/nvim-nio',
+    -- 'nvim-neotest/nvim-nio',
 
     -- Installs the debug adapters for you
     'williamboman/mason.nvim',
@@ -24,6 +24,7 @@ return {
 
     -- Add your own debuggers here
     'leoluz/nvim-dap-go',
+    'suketa/nvim-dap-ruby',
   },
   config = function()
     local dap = require 'dap'
@@ -33,6 +34,7 @@ return {
       -- Makes a best effort to setup the various debuggers with
       -- reasonable debug configurations
       automatic_setup = true,
+      automatic_installation = true,
 
       -- You can provide additional configuration to the handlers,
       -- see mason-nvim-dap README for more information
@@ -87,5 +89,8 @@ return {
 
     -- Install golang specific config
     require('dap-go').setup()
+
+    -- Install ruby specific config
+    require('dap-ruby').setup()
   end,
 }
